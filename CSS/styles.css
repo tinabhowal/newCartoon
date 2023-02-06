@@ -1,0 +1,102 @@
+
+
+:root{
+    --color-primary:#668ba4; 
+    --color-secondary:#efecea; 
+    --color-white: #fff;
+    --color-black: #000;
+    --box-shadow: -1px 10px 20px rgba(17, 18, 17, 0.2);
+    --border-radius:5px;
+}
+
+body{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; 
+    background: linear-gradient(114.3deg, rgb(19, 126, 57) 0.2%, rgb(8, 65, 91) 68.5%);
+    color:var(--color-secondary);
+}
+
+.pokemon-list{
+    /* text-align:center; */
+    list-style-type: none;
+    display:inline;
+}
+
+/* li{
+    display:inline; 
+} */
+
+.pokemon-list__item{
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    padding:1rem;
+    border-radius: 50%;
+    border: 1px inset var(--color-primary);
+    background-color: var(--color-primary);
+    color:inherit;
+    transition: background-color 1s ease-in-out;
+    width:100%;
+    text-align: center;
+    margin:5px;
+    list-style-type: none;
+    max-width: 20rem;
+}
+
+#modal-container {
+    display: none;
+  }
+  
+  #modal-container.is-visible {
+    position: fixed;
+    padding: 20px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    
+    /* to show it above other content */
+    z-index: 999; 
+    
+    /* to allow scrolling if the screen is not high enough*/
+    overflow: auto; 
+    
+    /* this is used to center the modal */
+    display: grid;
+    text-align: center;
+  }
+  
+  .modal {
+    margin: auto;
+    display: inline-block;
+    box-sizing: border-box;
+    background: #fff;
+    padding: 15px;
+    width: 100%;
+    max-width: 700px;
+    text-align: left;
+  }
+  
+  .modal-close {
+    float: right;
+    border: 0;
+    background: none;
+    color: #777;
+    text-decoration: underline;
+  }
+  
+  .modal h1 {
+    margin-top: 0;
+  }
+  
+  .modal p {
+    margin-bottom: 0;
+  }
