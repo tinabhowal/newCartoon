@@ -1,38 +1,9 @@
 
-// let pokemonList=[
-//     {name:"Caterpie", height:7, type: ["grass","water"] }, 
-//     {name:"Weedle", height:5, type: ["sweet","salty"] }, 
-//     {name:"Pidgeotto", height:6, type: ["jungle","air"] } 
-// ]
-
-
-
-// for (let i = 0;
-//          i < pokemonList.length;
-//          i++)
-
-
-// if(pokemonList[i].type[0]==="grass" &&  pokemonList[i].type[1]==="water")  {
-//    document.write(pokemonList[i].name + " (type: " + pokemonList[i].type + " ) - Oh! That's a grassy Pokemon!" + "<br>")
-// }
-// else if (pokemonList[i].type[0]==="sweet"  &&  pokemonList[i].type[1]==="salty"){
-//          document.write(pokemonList[i].name + " (type: " + pokemonList[i].type + " ) - Oh! That's a sweet and salty pokemon." + "<br>")
-//         }
-
-
-// else{
-//    document.write(pokemonList[i].name + " (type: " + pokemonList[i].type + " ) - Oh! That's not a grassy Pokemon!" + "<br>")
-
-// }
 
 
 
 
 
- 
-
-
-    // independent practice
     let pokemonRepository = (function (){
         let pokemonList = [];
         let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
@@ -73,7 +44,6 @@
         }
 
         
-
         function loadDetails(pokemon){
             let url = pokemon.detailsUrl;
             return fetch(url).then(function(response){
@@ -90,10 +60,16 @@
 
         
 
+
         function addListItem(pokemon){
+
             let ul = document.querySelector('.pokemon-list');
             let listItem = document.createElement('li');
+            listItem.classList.add('listItem');
+            listItem.classList.add('swiper-slide');
+            
             let button = document.createElement('button');
+           
             button.innerText = pokemon.name;
             loadDetails(pokemon).then(function(){
             let img = document.createElement('img');
@@ -101,15 +77,21 @@
             button.appendChild(img);
             
         });
-            button.classList.add('pokemon-list__item');        
+                
             button.addEventListener('click', function(){
                 showDetails(pokemon);
             });
             
             listItem.appendChild(button);
+            
             ul.appendChild(listItem);
     
         }
+
+
+
+
+
 
         function showModal(pokemon){
             let modalContainer = document.querySelector('#modal-container');
@@ -200,3 +182,38 @@
         pokemonRepository.addListItem(pokemon);
     });
 });
+
+
+
+
+
+
+
+
+  
+
+
+var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+   
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+  
+  });
+
+
+

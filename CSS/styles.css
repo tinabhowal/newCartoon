@@ -1,5 +1,4 @@
 
-
 :root{
     --color-primary:#668ba4; 
     --color-secondary:#efecea; 
@@ -9,7 +8,10 @@
     --border-radius:5px;
 }
 
+
+
 body{
+    
     padding: 0;
     margin:0;
     box-sizing: border-box;
@@ -17,37 +19,39 @@ body{
     font-family: 'Nunito', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px; 
-    background: linear-gradient(114.3deg, rgb(19, 126, 57) 0.2%, rgb(8, 65, 91) 68.5%);
+    font-size: 16px;  
     color:var(--color-secondary);
+    background-image: url('../pikachu.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
 }
+ 
+
+
+
+
+
+
 
 .pokemon-list{
-    /* text-align:center; */
+    
     list-style-type: none;
-    display:inline;
+  
 }
 
-/* li{
-    display:inline; 
-} */
 
-.pokemon-list__item{
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 700;
-    padding:1rem;
-    border-radius: 50%;
-    border: 1px inset var(--color-primary);
-    background-color: var(--color-primary);
-    color:inherit;
-    transition: background-color 1s ease-in-out;
-    width:100%;
-    text-align: center;
-    margin:5px;
-    list-style-type: none;
-    max-width: 20rem;
+
+
+.listItem{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid  #3f3e3e;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 }
+
 
 #modal-container {
     display: none;
@@ -83,20 +87,57 @@ body{
     width: 100%;
     max-width: 700px;
     text-align: left;
+    color: #3f3e3e;
   }
   
   .modal-close {
     float: right;
     border: 0;
     background: none;
-    color: #777;
+    color: #3f3e3e;
     text-decoration: underline;
   }
   
   .modal h1 {
     margin-top: 0;
+    color: #3f3e3e;
   }
   
   .modal p {
     margin-bottom: 0;
+    color: #3f3e3e;
   }
+
+
+
+
+  .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+  
+
+
+
+  
+
+
+
+
+
+
+
+ 
